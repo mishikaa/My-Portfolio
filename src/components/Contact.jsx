@@ -21,9 +21,7 @@ const Contact = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    
-    successPopup("Thankyou. I'll get back to you as soon as possible.")
-
+  
     setForm((prevData) => {
       return {
         ...prevData,
