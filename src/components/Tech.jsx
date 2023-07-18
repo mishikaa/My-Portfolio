@@ -16,7 +16,7 @@ const Tech = () => {
       </h2>
     </motion.div>
     <motion.p className='mt-4 text-secondary 
-    text-[17px] max-w-3xl leading-[32px]' 
+    text-[17px] leading-[32px]' 
     variants={fadeIn("","", 0.1, 1)}>
       I have a strong passion for learning new technologies, 
       which has allowed me to explore various domains and 

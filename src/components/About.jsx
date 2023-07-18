@@ -8,14 +8,16 @@ import {fadeIn, textVariant} from '../utils/motion'
 
 import { SectionWrapper } from '../higherOrderComponent'
 
-const Card = ({title, index, icon}) => {
+const Card = ({title, index, icon, url}) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right","spring", 0.5 * index, 0.75)}
         className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
       >
-        <div
+        <a
+          href={url}
+          target='_blank'
           options={{
             max: 45,
             scale: 1,
@@ -28,7 +30,7 @@ const Card = ({title, index, icon}) => {
           className='w-16 h-16 object-contain'
           />
           <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
-        </div>
+        </a>
       </motion.div>
     </Tilt>
   )
@@ -46,14 +48,15 @@ const About = () => {
       </h2>
     </motion.div>
     <motion.p className='mt-4 text-secondary 
-    text-[17px] max-w-3xl leading-[32px]' 
+    text-[17px] leading-[32px]' 
     variants={fadeIn("","", 0.1, 1)}>
-      I am a passionate Full Stack Developer who loves to explore new technologies and build scalable and efficient applications.
-      I am also interested in Blockchain development using Solidity, and can create blockchain-based applications.I 
-      have a good hold over developing Decentralized Applications or DApps using solidity smart-contracts.
-
-      I am also highly into Open Source and like to contribute to different projects. Currently. More information 
-      about my Open Source profile is available at GitHub | Mishika.
+      I am a self-taught full-stack web developer, UI/UX Designer and a Blockchain Enthusiast. My passion for software lies in dreaming up ideas and making them come true with elegant interfaces. I care greatly about the experience, architecture, and code quality of the things I build.
+      <br/>
+      <br/>I am also a passionate coder with C, C++, and Python programming languages expertise. With a strong foundation in computer science, I've dedicated significant time and effort to honing my data structures and algorithms skills. A regular practitioner on <a href="https://www.leetcode.com/mishikaj2001" className='text-slate-200' target="_blank">Leetcode</a>, I embrace the platform as an opportunity to further my understanding of complex problem-solving techniques. 
+      <br/>
+      <br/>I am also an open-source enthusiast.
+      I learned a lot from the open-source community, and like to contribute to different projects. More information 
+      about my Open Source profile is available at GitHub | <a href='https://github.com/mishikaa' className='text-slate-200' target="_blank">Mishika</a>.
     </motion.p>
 
     {/* Cards */}
