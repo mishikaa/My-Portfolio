@@ -57,18 +57,22 @@ const services = [
   {
     title: "Web Developer",
     icon: web,
+    url: "https://github.com/mishikaa?tab=repositories"
   },
   {
     title: "Backend Developer",
     icon: backend,
+    url: "https://github.com/mishikaa?tab=repositories"
   },
   {
     title: "UI / UX Designer",
     icon: mobile,
+    url: "https://www.figma.com/@mishika"
   },
   {
     title: "Canva Designer",
     icon: creator,
+    url: "https://www.instagram.com/_canva_hacks/"
   },
 ];
 
