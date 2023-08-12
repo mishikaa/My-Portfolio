@@ -31,7 +31,7 @@ const Hero = () => {
             focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 hover:scale-105"
           >
             <a 
-              href="resume.pdf" download="resume.pdf"
+              href="MishikaResume.pdf" download="MishikaResume.pdf"
               className="flex justify-center items-center gap-3 relative w-40 px-5 py-4 transition-all ease-in duration-75 bg-white dark:bg-gray-900 
               rounded-md group-hover:bg-opacity-0"
             >
