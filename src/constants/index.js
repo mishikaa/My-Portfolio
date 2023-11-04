@@ -3,6 +3,7 @@ import {
   mobile,
   creator,
   web,
+  github,
   backend,
   javascript,
   typescript,

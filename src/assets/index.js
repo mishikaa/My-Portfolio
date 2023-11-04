@@ -2,7 +2,6 @@ import logo from "./logo.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
 import website from "./website.svg"
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -23,6 +22,7 @@ import cpp from "./tech/cpp.svg";
 import solidity from "./tech/solidity.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
+import github from "./github.png";
 import gitlab from "./tech/gitlab.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -42,14 +42,23 @@ import readit from "./readit.png";
 import travelsync from "./travelsync.png";
 import taskit from "./taskit.png";
 
+import crystal from "./bgImages/crystal.png";
+import contactRight from "./bgImages/contactRight.png";
+import right from "./bgImages/right.png";
+import top from "./bgImages/top.png";
+
+import githubLogo from "./contactLogos/github.png";
+import instagram from "./contactLogos/instagram.png";
+import linkedin from "./contactLogos/linkedin.png";
+
 export {
   logo,
   profileimg,
   expressjs,
   creator,
+  github,
   mobile,
   web,
-  github,
   website,
   menu,
   metamask,
@@ -84,4 +93,11 @@ export {
   readit,
   travelsync,
   taskit,
+  crystal,
+  top,
+  right,
+  contactRight,
+  instagram,
+  githubLogo,
+  linkedin
 };

@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom"
 import {Navbar, Hero, Tech, Works, About, Contact, StarsCanvas} from "./components"
+import { contactRight } from "./assets"
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <div className="relative">
         <Contact /> 
         <StarsCanvas /> 
-        <img className="z-0 absolute bottom-0 right-[-10rem]" src="src/assets/bgImages/contactRight.png" alt="" />
+        <img className="z-0 absolute bottom-0 right-[-10rem]" src={contactRight} alt="bg-image" />
       </div>
     
     </div>

@@ -1,13 +1,13 @@
 import {motion} from 'framer-motion'
 import {styles} from '../styles'
 import {profileImg} from '../constants'
-import { download } from '../assets';
+import { download, right, top } from '../assets';
 
 const Hero = () => {
   
   return (
     <section className='relative w-full h-screen mx-auto'>
-      <img className="z-50 absolute -top-16 right-0" src="src/assets/bgImages/top.png" alt="bg-image" />
+      <img className="z-50 absolute -top-16 right-0" src={top} alt="bg-image" />
 
       <div className={`${styles.paddingX} absolute inset-0 
       top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -53,7 +53,7 @@ const Hero = () => {
           <img className='z-50 h-[350px] sm:h-[28rem] sm:w-[470px] rounded-xl' src={profileImg} alt="profile" />
         </div>
         
-        <img className="absolute bottom-0 -left-24 w-[45%] -z-10" src="src/assets/bgImages/right.png" alt="bg-image" />
+        <img className="absolute bottom-0 -left-24 w-[45%] -z-10" src={right} alt="bg-image" />
 
       </div>
       

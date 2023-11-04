@@ -7,6 +7,7 @@ import Earth from './canvas/Earth';
 import emailjs from '@emailjs/browser';
 import { errorPopup, successPopup } from './Popup';
 import { ToastContainer } from 'react-toastify';
+import { githubLogo, instagram, linkedin } from '../assets';
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -128,9 +129,9 @@ const Contact = () => {
 
     </div>
     <footer className='flex justify-center gap-5 mt-4'>
-      <a href="https://github.com/mishikaa"><img className='w-14' src="src/assets/contactLogos/github.png" alt="github" /></a>
-      <a href="https://www.linkedin.com/in/mishika16"><img className='w-14' src="src/assets/contactLogos/linkedin.png" alt="linkedin" /></a>
-      <a href="https://www.instagram.com/_._mishika_"><img className='w-14' src="src/assets/contactLogos/instagram.png" alt="instagram" /></a>
+      <a href="https://githubLogo.com/mishikaa"><img className='w-14' src={githubLogo} alt="githubLogo" /></a>
+      <a href="https://www.linkedin.com/in/mishika16"><img className='w-14' src={linkedin} alt="linkedin" /></a>
+      <a href="https://www.instagram.com/_._mishika_"><img className='w-14' src={instagram} alt="instagram" /></a>
     </footer>
     </>
   )

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import {fadeIn, textVariant} from '../utils/motion'
 import { styles } from '../styles'
 import { SectionWrapper } from '../higherOrderComponent'
+import { crystal } from '../assets'
 
 const Tech = () => {
   return (
@@ -55,7 +56,7 @@ const Tech = () => {
         </motion.div>
       ))}
     </div>
-    <img className="absolute bottom-20 -right-40" src="src/assets/bgImages/crystal.png" alt="crystal" />
+    <img className="absolute bottom-20 w-[35%] xl:-right-[20rem] sm:-right-40" src={crystal} alt="crystal" />
     </>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants/index'
-import { logo } from '../assets'
+import { logo, close, menu } from '../assets'
 
 const Navbar = () => {
   const [active, setActive] = useState("")
@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className='sm:hidden flex flex-1
           justify-end items-center'>
           <img
-            src={toggle ? "../src/assets/close.svg" : "../src/assets/menu.svg"} alt="menu"
+            src={toggle ? close : menu} alt="menu"
             className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
