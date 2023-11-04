@@ -37,7 +37,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import profileimg from './myPic.png';
-import femmecab from "./femmecab.png";
+import femmecab from "./femmeCab.png";
 import readit from "./readit.png";
 import travelsync from "./travelsync.png";
 import taskit from "./taskit.png";
