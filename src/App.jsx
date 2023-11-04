@@ -4,8 +4,8 @@ import {Navbar, Hero, Tech, Works, About, Contact, StarsCanvas} from "./componen
 function App() {
   return (
     <BrowserRouter>
-    <div className="relative z-0 bg-primary">
-      <div className="bg-hero-pattern bg-coverbog-no-repeat bg-center">
+    <div className="relative bg-[#0F103F] z-0 overflow-x-hidden">
+      <div>
         <Navbar />
         <Hero />
       </div>
@@ -14,9 +14,10 @@ function App() {
       <Tech /> 
       <Works /> 
       
-      <div className="relative z-0">
+      <div className="relative">
         <Contact /> 
         <StarsCanvas /> 
+        <img className="z-0 absolute bottom-0 right-[-10rem]" src="src/assets/bgImages/contactRight.png" alt="" />
       </div>
     
     </div>

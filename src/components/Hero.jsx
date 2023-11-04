@@ -7,6 +7,8 @@ const Hero = () => {
   
   return (
     <section className='relative w-full h-screen mx-auto'>
+      <img className="z-50 absolute -top-16 right-0" src="src/assets/bgImages/top.png" alt="bg-image" />
+
       <div className={`${styles.paddingX} absolute inset-0 
       top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         
@@ -18,15 +20,20 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText}`}>Hey, I'm <span className='text-[#915eff]'>Mishika</span></h1>
-          <p className={`${styles.heroSubText}`}>A Full Stack Web Developer,
-          <br className='sm:block hidden'/>
-          A Blockchain Enthusiast
-          </p>
+          <div className='wrapper'>
+            <div className={`static-txt`}>A</div>
+            <ul className={`dynamic-txts`}>
+              <li><span> &nbsp; Full Stack Web Developer</span></li>
+              <li><span> &nbsp; UI/UX Designer</span></li>
+              <li><span> &nbsp; Blockchain Developer</span></li>
+              <li><span>n Open Source Contributer</span></li>
+            </ul>
+          </div>
           
           <div className='mt-16 w-full'>
           <button 
             className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm 
-            font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 
+            font-medium text-gray-900 rounded-xl group bg-gradient-to-l from-[#2957A3] via-yellow-[#7C5CC2] to-[#C961DE]
             group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white 
             focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 hover:scale-105"
           >
@@ -43,8 +50,11 @@ const Hero = () => {
         </div>
         
         <div>
-          <img className='h-[350px] sm:h-[28rem] sm:w-[470px] rounded-xl' src={profileImg} alt="profile" />
+          <img className='z-50 h-[350px] sm:h-[28rem] sm:w-[470px] rounded-xl' src={profileImg} alt="profile" />
         </div>
+        
+        <img className="absolute bottom-0 -left-24 w-[45%] -z-10" src="src/assets/bgImages/right.png" alt="bg-image" />
+
       </div>
       
       {/* Scroller */}

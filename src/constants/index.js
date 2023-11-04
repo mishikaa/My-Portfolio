@@ -1,14 +1,16 @@
 import {
   profileimg,
   mobile,
-  backend,
   creator,
   web,
+  backend,
   javascript,
   typescript,
   html,
   css,
   reactjs,
+  metamask,
+  expressjs,
   redux,
   tailwind,
   nodejs,
@@ -16,6 +18,7 @@ import {
   c,
   cpp,
   git,
+  gitlab,
   bootstrap,
   canva,
   framermotion,
@@ -25,7 +28,8 @@ import {
   socketio,
   solidity,
   figma,
-  
+  mysql,
+  femmecab,
   readit,
   travelsync,
   taskit,
@@ -81,25 +85,29 @@ const technologies = [
     name: "HTML 5",
     icon: html,
   },
-  // {
-  //   name: "CSS 3",
-  //   icon: css,
-  // },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
   {
     name: "JavaScript",
     icon: javascript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Postgre SQL",
+    name: "PostgreSQL",
     icon: postgresql,
+  },
+  {
+    name: "MySql",
+    icon: mysql,
   },
   {
     name: "React JS",
@@ -109,18 +117,18 @@ const technologies = [
     name: "Redux Toolkit",
     icon: redux,
   },
-  // {
-  //   name: "Tailwind CSS",
-  //   icon: tailwind,
-  // },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
   {
     name: "Three JS",
     icon: threejs,
   },
-  // {
-  //   name: "Material UI",
-  //   icon: materialui,
-  // },
+  {
+    name: "Material UI",
+    icon: materialui,
+  },
 
   {
     name: "Framer Motion",
@@ -134,14 +142,18 @@ const technologies = [
     name: "Node JS",
     icon: nodejs,
   },
-  // {
-  //   name: "socket io",
-  //   icon: socketio,
-  // },
-  // {
-  //   name: "C",
-  //   icon: c,
-  // },
+  {
+    name: "Expressjs",
+    icon: expressjs,
+  },
+  {
+    name: "socket io",
+    icon: socketio,
+  },
+  {
+    name: "C",
+    icon: c,
+  },
   {
     name: "C++",
     icon: cpp,
@@ -151,17 +163,29 @@ const technologies = [
     icon: solidity,
   },
   {
+    name: "Metamask",
+    icon: metamask,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
     name: "git",
     icon: git,
+  },
+  {
+    name: "gitlab",
+    icon: gitlab,
   },
   {
     name: "figma",
     icon: figma,
   },
-  // {
-  //   name: "Canva",
-  //   icon: canva,
-  // },
+  {
+    name: "Canva",
+    icon: canva,
+  },
 ];
 
 const experiences = [
@@ -178,6 +202,48 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "Femme Cab",
+    description:
+      "A women-only cab booking system that is meticulously designed for the safe and comfortable travelling experience of the women in India.",
+    tags: [
+      {
+        name: "react",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "opencv",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "flask",
+        color: "green-text-gradient",
+      },
+    ],
+    image: femmecab,
+    live_link:"https://femme-cab.vercel.app/",
+    source_code_link: "https://github.com/mishikaa/femmeCab",
+  },
   {
     name: "Read It",
     description:

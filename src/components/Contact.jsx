@@ -59,10 +59,11 @@ const Contact = () => {
   }
   
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-12 overflow-hidden'>
+    <>
+    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-2 justify-center overflow-hidden'>
       <motion.div
         variants={slideIn("left", "tween", 0.25, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-col flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact &nbsp;Me</h3>
@@ -117,14 +118,21 @@ const Contact = () => {
       </motion.div>
 
       {/* For the 3D earth model */}
-      <motion.div
+      {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:[550px] h-[350px]'
       >
         <Earth />
-      </motion.div>
-       <ToastContainer />
+      </motion.div> */}
+       {/* <ToastContainer /> */}
+
     </div>
+    <footer className='flex justify-center gap-5 mt-4'>
+      <a href="https://github.com/mishikaa"><img className='w-14' src="src/assets/contactLogos/github.png" alt="github" /></a>
+      <a href="https://www.linkedin.com/in/mishika16"><img className='w-14' src="src/assets/contactLogos/linkedin.png" alt="linkedin" /></a>
+      <a href="https://www.instagram.com/_._mishika_"><img className='w-14' src="src/assets/contactLogos/instagram.png" alt="instagram" /></a>
+    </footer>
+    </>
   )
 }
 

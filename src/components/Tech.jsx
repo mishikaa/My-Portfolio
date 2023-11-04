@@ -33,9 +33,10 @@ const Tech = () => {
           }}
           className='w-28 h-28' 
           key={tech.name}>
-          <BallCanvas icon={tech.icon}/>
+          {/* <BallCanvas icon={tech.icon}/> */}
+          <img className='w-24 hover:animate-spin' src={tech.icon} alt={tech.name} />
           
-          <motion.div className='flex items-end justify-center relative bottom-16 h-24'
+          <motion.div className='flex items-end justify-center relative bottom-16 h-24 hover:animate-bounce'
             initial={{opacity:0}}   
             whileHover={{
               opacity: 1, 
@@ -54,6 +55,7 @@ const Tech = () => {
         </motion.div>
       ))}
     </div>
+    <img className="absolute bottom-20 -right-40" src="src/assets/bgImages/crystal.png" alt="crystal" />
     </>
   )
 }
