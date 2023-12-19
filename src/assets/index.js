@@ -40,7 +40,7 @@ import vuejs from "./tech/vuejs.svg";
 import threejs from "./tech/threejs.svg";
 import firebase from "./tech/firebase.png";
 import netlify from "./tech/netlify.png";
-import vercel from "./tech/vercel.png";
+import vercel from "./tech/Vercel.png";
 import sass from "./tech/sass.png";
 import nextjs from "./tech/nextjs.png";
 
