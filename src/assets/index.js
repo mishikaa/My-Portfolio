@@ -34,10 +34,20 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
+import redis from "./tech/redis.png";
+import hardhat from "./tech/hardhat.svg";
+import vuejs from "./tech/vuejs.svg";
 import threejs from "./tech/threejs.svg";
+import firebase from "./tech/firebase.png";
+import netlify from "./tech/netlify.png";
+import vercel from "./tech/vercel.png";
+import sass from "./tech/sass.png";
+import nextjs from "./tech/nextjs.png";
 
 import profileimg from './myPic.png';
+import kknns from './kknns.png';
 import femmecab from "./femmeCab.png";
+import belleBeauty from "./belleBeauty.png";
 import readit from "./readit.png";
 import travelsync from "./travelsync.png";
 import taskit from "./taskit.png";
@@ -50,6 +60,8 @@ import top from "./bgImages/top.png";
 import githubLogo from "./contactLogos/github.png";
 import instagram from "./contactLogos/instagram.png";
 import linkedin from "./contactLogos/linkedin.png";
+import exposys from "./exposys.png";
+import exposys_certificate from "./exposys_certificate.pdf";
 
 export {
   logo,
@@ -72,7 +84,15 @@ export {
   html,
   bootstrap,
   canva,
+  redis,
   framermotion,
+  firebase,
+  netlify,
+  vercel,
+  vuejs,
+  hardhat,
+  sass,
+  nextjs,
   materialui,
   c,
   cpp,
@@ -89,6 +109,8 @@ export {
   tailwind,
   typescript,
   threejs,
+  belleBeauty,
+  kknns,
   femmecab,
   readit,
   travelsync,
@@ -99,5 +121,7 @@ export {
   contactRight,
   instagram,
   githubLogo,
-  linkedin
+  linkedin,
+  exposys,
+  exposys_certificate
 };

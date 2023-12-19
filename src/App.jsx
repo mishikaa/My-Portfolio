@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import {Navbar, Hero, Tech, Works, About, Contact, StarsCanvas} from "./components"
+import {Navbar, Hero, Tech, Works, About, Contact, StarsCanvas, Experience} from "./components"
 import { contactRight } from "./assets"
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <About /> 
       <Tech /> 
       <Works /> 
+      <Experience /> 
       
       <div className="relative">
         <Contact /> 

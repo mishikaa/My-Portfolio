@@ -4,6 +4,7 @@ import {
   creator,
   web,
   github,
+  redis,
   backend,
   javascript,
   typescript,
@@ -35,6 +36,17 @@ import {
   travelsync,
   taskit,
   threejs,
+  hardhat,
+  nextjs,
+  vuejs,
+  sass,
+  netlify,
+  vercel,
+  firebase,
+  belleBeauty,
+  kknns,
+  exposys,
+  exposys_certificate,
 } from "../assets";
 
 export const profileImg = profileimg;
@@ -91,53 +103,20 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Sass",
+    icon: sass,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
   {
     name: "TypeScript",
     icon: typescript,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "PostgreSQL",
-    icon: postgresql,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "Material UI",
-    icon: materialui,
-  },
-
-  {
-    name: "Framer Motion",
-    icon: framermotion,
-  },
-  {
-    name: "Postman",
-    icon: postman,
   },
   {
     name: "Node JS",
@@ -160,12 +139,77 @@ const technologies = [
     icon: cpp,
   },
   {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "MySql",
+    icon: mysql,
+  },
+  {
+    name: "Redis",
+    icon: redis,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Next.js",
+    icon: nextjs,
+  },
+  {
+    name: "Vue.js",
+    icon: vuejs,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "Material UI",
+    icon: materialui,
+  },
+
+  {
+    name: "Framer Motion",
+    icon: framermotion,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  {
     name: "Solidity",
     icon: solidity,
   },
   {
     name: "Metamask",
     icon: metamask,
+  },
+  {
+    name: "Hardhat",
+    icon: hardhat,
+  },
+  {
+    name: "Netlify",
+    icon: netlify,
+  },
+  {
+    name: "Vercel",
+    icon: vercel,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
   },
   {
     name: "Bootstrap",
@@ -180,6 +224,10 @@ const technologies = [
     icon: gitlab,
   },
   {
+    name: "github",
+    icon: github,
+  },
+  {
     name: "figma",
     icon: figma,
   },
@@ -191,18 +239,77 @@ const technologies = [
 
 const experiences = [
   {
-    title: "",
-    company_name: "",
-    icon: "",
+    title: "Web Developer Intern",
+    company_name: "Exposys Data Labs",
+    icon: exposys,
     iconBg: "#383E56",
-    date: "",
+    date: "Nov-Dec 2023",
     points: [
-      "",
+      "Developed a web application for a startup business.",
+      "Worked on both frontend and backend development tasks.",
+      "Worked with Next.js, tailwindcss, MongoDB, and node.js tech stacks."
     ],
+    certificate: exposys_certificate
   }
 ];
 
 const projects = [
+  {
+    name: "Belle Beauty",
+    description:
+      "Belle Beauty envisions a seamless and interactive experience for its customers, allowing them to effortlessly browse services, book appointments, and engage with the salon’s offerings from the comfort of their homes.",
+    tags: [
+      {
+        name: "next.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: belleBeauty,
+    live_link:"https://belleBeauty.vercel.app/",
+    source_code_link: "https://github.com/mishikaa/belleBeauty",
+  },
+  {
+    name: "KKNNS",
+    description:
+      " National Network Services is committed to delivering reliable solutions and has a proven track record in the field. National Network Services is home to a highly skilled team of professionals with extensive expertise in optical fiber and coaxial cable systems' operational and maintenance aspects. ",
+    tags: [
+      {
+        name: "next.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "yellow-text-gradient",
+      }
+    ],
+    image: kknns,
+    live_link:"https://kknns.vercel.app/",
+    source_code_link: "https://github.com/mishikaa/kknns",
+  },
   {
     name: "Femme Cab",
     description:
