@@ -129,7 +129,7 @@ const Contact = () => {
 
     </div>
     <footer className='flex justify-center gap-5 mt-4'>
-      <a href="https://githubLogo.com/mishikaa"><img className='w-14' src={githubLogo} alt="githubLogo" /></a>
+      <a href="https://github.com/mishikaa"><img className='w-14' src={githubLogo} alt="githubLogo" /></a>
       <a href="https://www.linkedin.com/in/mishika16"><img className='w-14' src={linkedin} alt="linkedin" /></a>
       <a href="https://www.instagram.com/_._mishika_"><img className='w-14' src={instagram} alt="instagram" /></a>
     </footer>
