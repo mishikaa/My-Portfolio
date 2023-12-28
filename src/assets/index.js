@@ -61,6 +61,7 @@ import githubLogo from "./contactLogos/github.png";
 import instagram from "./contactLogos/instagram.png";
 import linkedin from "./contactLogos/linkedin.png";
 import exposys from "./exposys.png";
+import upwork from "./upwork.png";
 import exposys_certificate from "./exposys_certificate.pdf";
 
 export {
@@ -123,5 +124,6 @@ export {
   githubLogo,
   linkedin,
   exposys,
-  exposys_certificate
+  exposys_certificate,
+  upwork
 };

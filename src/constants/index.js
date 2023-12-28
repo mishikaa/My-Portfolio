@@ -47,6 +47,7 @@ import {
   kknns,
   exposys,
   exposys_certificate,
+  upwork,
 } from "../assets";
 
 export const profileImg = profileimg;
@@ -250,6 +251,17 @@ const experiences = [
       "Worked with Next.js, tailwindcss, MongoDB, and node.js tech stacks."
     ],
     certificate: exposys_certificate
+  },
+  {
+    title: "Freelancer",
+    company_name: "Upwork",
+    icon: upwork,
+    iconBg: "#383E56",
+    date: "Dec 10-Dec 17 2023",
+    points: [
+      "Created a portfolio website for the KKNNS organization.",
+      "Worked with Next.js, tailwindcss, and node.js tech stacks."
+    ],
   }
 ];
 
@@ -307,7 +319,7 @@ const projects = [
       }
     ],
     image: kknns,
-    live_link:"https://kknns.vercel.app/",
+    live_link:"https://www.kknns.com/",
     source_code_link: "https://github.com/mishikaa/kknns",
   },
   {
