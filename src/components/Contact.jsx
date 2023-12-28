@@ -3,10 +3,8 @@ import { SectionWrapper } from '../higherOrderComponent';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { slideIn } from '../utils/motion';
-import Earth from './canvas/Earth';
 import emailjs from '@emailjs/browser';
 import { errorPopup, successPopup } from './Popup';
-import { ToastContainer } from 'react-toastify';
 import { githubLogo, instagram, linkedin } from '../assets';
 
 const Contact = () => {
@@ -36,7 +34,13 @@ const Contact = () => {
       event.preventDefault();
       setLoading(true);
       
-      await emailjs.send('service_1fecrps', 'template_mcr15vp', {
+      if(!form.email || !form.message) {
+        errorPopup("Kindly fill the required fields(*)");
+        setLoading(false);
+        return;
+      }
+      
+      await emailjs.send('service_1fecrps', 'template_4ui6aga', {
         from_name: form.name,
         to_name: "Mishika",
         from_email: form.email,
@@ -86,25 +90,27 @@ const Contact = () => {
           />
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium'>Email</span>
+            <span className='text-white font-medium'>Email <span className='text-rose-800'>*</span></span>
           </label>
           <input
             type="email"
             name="email"
             onChange={handleChange}
             value={form.email}
+            required
             className='bg-tertiary mb-4 py-4 px-6 placeholder:text-secondary
             text-white rounded-lg border-none outlined-none font-medium'
           />
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium'>Message / Feedback</span>
+            <span className='text-white font-medium'>Message / Feedback <span className='text-rose-800'>*</span></span>
           </label>
           <textarea
             rows="8"
             name="message"
             onChange={handleChange}
             value={form.message}
+            required
             className='bg-tertiary mb-4 py-4 px-6 placeholder:text-secondary
             text-white rounded-lg border-none outlined-none font-medium resize-none'
           />
@@ -117,15 +123,6 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-
-      {/* For the 3D earth model */}
-      {/* <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:[550px] h-[350px]'
-      >
-        <Earth />
-      </motion.div> */}
-       {/* <ToastContainer /> */}
 
     </div>
     <footer className='flex justify-center gap-5 mt-4'>
