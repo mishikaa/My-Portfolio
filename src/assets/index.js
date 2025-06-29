@@ -2,6 +2,7 @@ import logo from "./logo.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
+import arCard from "./arCard.png";
 import website from "./website.svg"
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -10,6 +11,7 @@ import download from "./download.png";
 import css from "./tech/css.png";
 import bootstrap from "./tech/bootstrap.svg";
 import backend from "./backend.png";
+import devspark from "./devspark.png";
 import expressjs from "./tech/expressjs.svg";
 import canva from "./tech/canva.svg";
 import framermotion from "./tech/framermotion.svg";
@@ -18,7 +20,13 @@ import postgresql from "./tech/postgresql.svg";
 import postman from "./tech/postman.png";
 import socketio from "./tech/socketio.svg";
 import c from "./tech/c.svg";
+import ollama from "./tech/ollama.png";
+import langchain from "./tech/langchain.png";
+import chromaDB from "./tech/chromaDB.png";
 import cpp from "./tech/cpp.svg";
+import python from "./tech/python.png";
+import django from "./tech/django.svg";
+import ar from "./tech/ar.png";
 import solidity from "./tech/solidity.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
@@ -44,11 +52,15 @@ import vercel from "./tech/Vercel.png";
 import sass from "./tech/sass.png";
 import nextjs from "./tech/nextjs.png";
 
-import profileimg from './myPic.png';
+import profileimg from './profile.jpg';
 import kknns from './kknns.png';
 import femmecab from "./femmeCab.png";
+import cisco from "./cisco.png";
 import belleBeauty from "./belleBeauty.png";
 import readit from "./readit.png";
+import codemaster from "./codemaster.png";
+import digifund from "./digifund.png";
+import arBeats from "./arBeats.png";
 import travelsync from "./travelsync.png";
 import taskit from "./taskit.png";
 
@@ -63,6 +75,7 @@ import linkedin from "./contactLogos/linkedin.png";
 import exposys from "./exposys.png";
 import upwork from "./upwork.png";
 import exposys_certificate from "./exposys_certificate.pdf";
+import devspark_certificate from "./devspark_certificate.pdf";
 
 export {
   logo,
@@ -79,10 +92,14 @@ export {
   close,
   download,
   css,
+  ar,
   figma,
   git,
   gitlab,
   html,
+  langchain,
+  chromaDB,
+  ollama,
   bootstrap,
   canva,
   redis,
@@ -97,6 +114,8 @@ export {
   materialui,
   c,
   cpp,
+  python,
+  django,
   backend,
   postgresql,
   postman,
@@ -114,8 +133,12 @@ export {
   kknns,
   femmecab,
   readit,
+  codemaster,
+  digifund,
+  arBeats,
   travelsync,
   taskit,
+  arCard,
   crystal,
   top,
   right,
@@ -123,7 +146,10 @@ export {
   instagram,
   githubLogo,
   linkedin,
+  cisco,
   exposys,
+  devspark,
   exposys_certificate,
+  devspark_certificate,
   upwork
 };

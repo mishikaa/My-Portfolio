@@ -13,6 +13,33 @@
   color-scheme: dark;
 }
 
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #915eff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c45e8;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -21,61 +48,177 @@
 
 .wrapper {
   display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .static-txt {
   color: #fff;
-  font-size: 40px;
   font-weight: 400;
+  margin-right: 0.25rem;
 }
 
 .dynamic-txts {
-  height: 60px;
-  line-height: 60px;
   overflow: hidden;
+  position: relative;
 }
 
 .dynamic-txts li {
   list-style: none;
-  font-size: 40px;
   font-weight: 500;
   position: relative;
   top: 0;
   animation: slide 20s steps(4) infinite;
+  white-space: nowrap;
 }
 
 @keyframes slide {
   100% {
-    top: -240px;
+    top: calc(-100% * 4);
   }
 }
 
 .dynamic-txts li span {
   position: relative;
-  margin: 10px 0;
-  line-height: 55px;
+  display: inline-block;
 }
 
 .dynamic-txts li span::after {
   content: "";
   position: absolute;
   left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   background: #0F103F;
-  border-left: 1px solid #fff;
-  animation: typing 5s steps(25) infinite;
+  border-left: 2px solid #fff;
+  animation: typing 5s steps(30) infinite;
 }
 
 @keyframes typing {
-
   40%,
   60% {
-    left: calc(100% + 30px);
+    left: calc(100% + 4px);
   }
-
   100% {
     left: 0;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 640px) {
+  .static-txt {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .dynamic-txts {
+    height: 2rem;
+    line-height: 2rem;
+  }
+  
+  .dynamic-txts li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .dynamic-txts li span {
+    line-height: 2rem;
+  }
+  
+  @keyframes slide {
+    100% {
+      top: -8rem;
+    }
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Small tablets */
+@media (min-width: 641px) and (max-width: 768px) {
+  .static-txt {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .dynamic-txts {
+    height: 2.25rem;
+    line-height: 2.25rem;
+  }
+  
+  .dynamic-txts li {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .dynamic-txts li span {
+    line-height: 2.25rem;
+  }
+  
+  @keyframes slide {
+    100% {
+      top: -9rem;
+    }
+  }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .static-txt {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  .dynamic-txts {
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+  
+  .dynamic-txts li {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  .dynamic-txts li span {
+    line-height: 2.5rem;
+  }
+  
+  @keyframes slide {
+    100% {
+      top: -10rem;
+    }
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .static-txt {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .dynamic-txts {
+    height: 3rem;
+    line-height: 3rem;
+  }
+  
+  .dynamic-txts li {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .dynamic-txts li span {
+    line-height: 3rem;
+  }
+  
+  @keyframes slide {
+    100% {
+      top: -12rem;
+    }
   }
 }
 /* .wrapper {
@@ -166,6 +309,7 @@
       #f5af19);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -181,6 +325,7 @@
       #ecb687);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -196,6 +341,7 @@
       #38ef7d);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -212,6 +358,7 @@
       #56ccf2);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -227,6 +374,7 @@
       #fc6767);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -326,5 +474,56 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+
+/* Additional responsive utilities */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Enhanced animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Improved hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid #915eff;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+button, input, textarea, a {
+  transition: all 0.2s ease-in-out;
 }
 

@@ -1,7 +1,6 @@
 import {
   profileimg,
   mobile,
-  creator,
   web,
   github,
   redis,
@@ -17,9 +16,16 @@ import {
   tailwind,
   nodejs,
   mongodb,
+  devspark,
   c,
   cpp,
+  python,
+  ar,
+  django,
   git,
+  langchain,
+  ollama,
+  chromaDB,
   gitlab,
   bootstrap,
   canva,
@@ -33,6 +39,9 @@ import {
   mysql,
   femmecab,
   readit,
+  codemaster,
+  digifund,
+  arBeats,
   travelsync,
   taskit,
   threejs,
@@ -46,8 +55,11 @@ import {
   belleBeauty,
   kknns,
   exposys,
-  exposys_certificate,
   upwork,
+  cisco,
+  exposys_certificate,
+  devspark_certificate,
+  arCard
 } from "../assets";
 
 export const profileImg = profileimg;
@@ -62,8 +74,12 @@ export const navLinks = [
     title: "Skills",
   },
   {
+    id: "experience",
+    title: "Experience",
+  },
+  {
     id: "works",
-    title: "Works",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -73,28 +89,56 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Software Engineer",
     icon: web,
     url: "https://github.com/mishikaa?tab=repositories"
   },
   {
-    title: "Backend Developer",
+    title: "Fullstack Web Developer",
     icon: backend,
     url: "https://github.com/mishikaa?tab=repositories"
+  },
+  {
+    title: "AR Developer & Enthusiast",
+    icon: arCard,
+    url: "https://github.com/mishikaa/ARBeats"
   },
   {
     title: "UI / UX Designer",
     icon: mobile,
     url: "https://www.figma.com/@mishika"
-  },
-  {
-    title: "Canva Designer",
-    icon: creator,
-    url: "https://www.instagram.com/_canva_hacks/"
-  },
+  }
 ];
 
 const technologies = [
+  {
+    name: "C",
+    icon: c,
+  },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "Django",
+    icon: django,
+  },
+  {
+    name: "Langchain",
+    icon: langchain,
+  },
+  {
+    name: "Ollama",
+    icon: ollama,
+  },
+  {
+    name: "ChromaDB",
+    icon: chromaDB,
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -132,14 +176,6 @@ const technologies = [
     icon: socketio,
   },
   {
-    name: "C",
-    icon: c,
-  },
-  {
-    name: "C++",
-    icon: cpp,
-  },
-  {
     name: "MongoDB",
     icon: mongodb,
   },
@@ -170,6 +206,10 @@ const technologies = [
   {
     name: "Redux Toolkit",
     icon: redux,
+  },
+  {
+    name: "AR.js",
+    icon: ar,
   },
   {
     name: "Three JS",
@@ -232,19 +272,46 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "Canva",
-    icon: canva,
-  },
+  // {
+  //   name: "Canva",
+  //   icon: canva,
+  // },
 ];
 
 const experiences = [
   {
-    title: "Web Developer Intern",
+    title: "Software Engineering Intern",
+    company_name: "Cisco Systems",
+    icon: cisco,
+    iconBg: "#383E56",
+    date: "January 2025 - July 2025",
+    points: [
+        "Built a multi-agent LLM diagnostic system using RAG for automated triage, root cause analysis, and error classification, streamlining QA and debugging.",
+        "Developed a log retrieval agent to query ELK (Kibana) and Kubernetes metrics, aggregating system health into actionable insights.",
+        "Optimized complex PostgreSQL queries for real-time analytics and anomaly detection, enhancing performance monitoring.",
+        "Enhanced a Django Runstats Dashboard with advanced filters, interactive Chart.js visuals, and improved UI/UX for better user engagement."
+    ]
+
+  },
+  {
+    title: "Web Development Intern",
+    company_name: "Devspark",
+    icon: devspark,
+    iconBg: "#383E56",
+    date: "May 13 - July 14, 2024",
+    points: [
+      "Built a full-stack MERN application for project management, enhancing team collaboration.",
+      "Implemented Google OAuth 2.0 authentication with role-based access control for secure user access.",
+      "Developed and optimized a React.js, Node.js, and MongoDB-based system with AWS S3, CDN, and pre-signed URLs for efficient file storage and retrieval."
+    ],
+    certificate: devspark_certificate
+  },
+  {
+    title: "Web Development Intern",
     company_name: "Exposys Data Labs",
     icon: exposys,
     iconBg: "#383E56",
-    date: "Nov-Dec 2023",
+    date: "November 3 - December 2, 2023",
     points: [
       "Developed a web application for a startup business.",
       "Worked on both frontend and backend development tasks.",
@@ -255,205 +322,209 @@ const experiences = [
   {
     title: "Freelancer",
     company_name: "Upwork",
-    icon: upwork,
+    icon: upwork, 
     iconBg: "#383E56",
-    date: "Dec 10-Dec 17 2023",
+    date: "December 10 - December 17, 2023",
     points: [
-      "Created a portfolio website for the KKNNS organization.",
-      "Worked with Next.js, tailwindcss, and node.js tech stacks."
+      "Created a portfolio website for the KKNNS organization. (LINK)",
+      "Worked with Next.js, Tailwind CSS, and Node.js tech stacks."
     ],
+    link: "https://www.sscnmodel.in/"
   }
 ];
 
-const projects = [
-  {
-    name: "Belle Beauty",
-    description:
-      "Belle Beauty envisions a seamless and interactive experience for its customers, allowing them to effortlessly browse services, book appointments, and engage with the salon’s offerings from the comfort of their homes.",
-    tags: [
-      {
-        name: "next.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "yellow-text-gradient",
-      },
-    ],
-    image: belleBeauty,
-    live_link:"https://belleBeauty.vercel.app/",
-    source_code_link: "https://github.com/mishikaa/belleBeauty",
-  },
-  {
-    name: "KKNNS",
-    description:
-      " National Network Services is committed to delivering reliable solutions and has a proven track record in the field. National Network Services is home to a highly skilled team of professionals with extensive expertise in optical fiber and coaxial cable systems' operational and maintenance aspects. ",
-    tags: [
-      {
-        name: "next.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "yellow-text-gradient",
-      }
-    ],
-    image: kknns,
-    live_link:"https://www.kknns.com/",
-    source_code_link: "https://github.com/mishikaa/kknns",
-  },
-  {
-    name: "Femme Cab",
-    description:
-      "A women-only cab booking system that is meticulously designed for the safe and comfortable travelling experience of the women in India.",
-    tags: [
-      {
-        name: "react",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "express",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "opencv",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "flask",
-        color: "green-text-gradient",
-      },
-    ],
-    image: femmecab,
-    live_link:"https://femme-cab.vercel.app/",
-    source_code_link: "https://github.com/mishikaa/femmeCab",
-  },
-  {
-    name: "Read It",
-    description:
-      "ReadIt is a blogging website designed to provide a platform for users to share and discover engaging content on a wide range of topics. ",
-    tags: [
-      {
-        name: "EJS",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "express",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "orange-text-gradient",
-      }
-    ],
-    image: readit,
-    live_link:"https://readit-um3r.onrender.com",
-    source_code_link: "https://github.com/mishikaa/ReadIt",
-  },
-  {
-    name: "Travel Sync",
-    description:
-      "A chat application designed specifically for global travelers. It aims to connect the travel enthusiasts, share experiences, and seek advice from individuals planning to visit their destinations.",
-    tags: [
-      {
-        name: "react",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "express",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "socket.io",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: travelsync,
-    live_link:"",
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Task It",
-    description:
-      "A to-do web application to assist individuals in effectively organizing their daily responsibilities. It is designed to streamline task management, and increase productivity,",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "redux",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "express",
-        color: "green-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "yellow-text-gradient",
-      },
-      {
-        name: "postgresql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: taskit,
-    live_link:"",
-    source_code_link: "https://github.com/",
-  },
-];
+const projects = {
+  webDevelopment: [
+    {
+      name: "Code Master",
+      description: "A powerful DSA problem search engine with BM25 and TF-IDF ranking algorithms.",
+      tags: [
+        { name: "EJS", color: "pink-text-gradient" },
+        { name: "JavaScript", color: "blue-text-gradient" },
+        { name: "Node.js", color: "yellow-text-gradient" },
+        { name: "Express.js", color: "green-text-gradient" },
+        { name: "BM25", color: "orange-text-gradient" },
+        { name: "TF-IDF", color: "pink-text-gradient" }
+      ],
+      image: codemaster,
+      live_link: "https://searchcodemaster.onrender.com/",
+      source_code_link: "https://github.com/mishikaa/codeMaster"
+    },
+    {
+      name: "Femme Cab",
+      description: "A women-only cab booking system for safer travel.",
+      tags: [
+        { name: "React", color: "pink-text-gradient" },
+        { name: "Node.js", color: "orange-text-gradient" },
+        { name: "Express", color: "green-text-gradient" },
+        { name: "MongoDB", color: "orange-text-gradient" },
+        { name: "Flask", color: "green-text-gradient" },
+        { name: "OpenCV", color: "blue-text-gradient" }
+      ],
+      image: femmecab,
+      live_link: "https://femme-cab.vercel.app/",
+      source_code_link: "https://github.com/mishikaa/femmeCab"
+    },
+    {
+      name: "Belle Beauty",
+      description: "A salon service booking platform.",
+      tags: [
+        { name: "Next.js", color: "pink-text-gradient" },
+        { name: "TypeScript", color: "green-text-gradient" },
+        { name: "JavaScript", color: "blue-text-gradient" },
+        { name: "TailwindCSS", color: "yellow-text-gradient" },
+        { name: "Node.js", color: "orange-text-gradient" },
+        { name: "MongoDB", color: "yellow-text-gradient" }
+      ],
+      image: belleBeauty,
+      live_link: "https://belleBeauty.vercel.app/",
+      source_code_link: "https://github.com/mishikaa/belleBeauty"
+    },
+    {
+      name: "Read It",
+      description:
+        "ReadIt is a blogging website designed to provide a platform for users to share and discover engaging content on a wide range of topics. ",
+      tags: [
+        {
+          name: "EJS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "nodejs",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "orange-text-gradient",
+        }
+      ],
+      image: readit,
+      live_link:"https://readit-um3r.onrender.com",
+      source_code_link: "https://github.com/mishikaa/ReadIt",
+    },
+    {
+      name: "Travel Sync",
+      description:
+        "A chat application designed specifically for global travelers. It aims to connect the travel enthusiasts, share experiences, and seek advice from individuals planning to visit their destinations.",
+      tags: [
+        {
+          name: "react",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "css",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "socket.io",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: travelsync,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "Task It",
+      description:
+        "A to-do web application to assist individuals in effectively organizing their daily responsibilities. It is designed to streamline task management, and increase productivity,",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "redux",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "nodejs",
+          color: "yellow-text-gradient",
+        },
+        {
+          name: "postgresql",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: taskit,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "KKNNS",
+      description:
+        " National Network Services is committed to delivering reliable solutions and has a proven track record in the field. ",
+      tags: [
+        {
+          name: "next.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwindcss",
+          color: "yellow-text-gradient",
+        }
+      ],
+      image: kknns,
+      live_link:"https://www.kknns.com/",
+      source_code_link: "https://github.com/mishikaa/kknns",
+    }
+  ],
+  blockchain: [
+    {
+      name: "Digi Fund",
+      description: "A decentralized crowdfunding platform leveraging blockchain.",
+      tags: [
+        { name: "Next.js", color: "pink-text-gradient" },
+        { name: "TypeScript", color: "green-text-gradient" },
+        { name: "Solidity", color: "blue-text-gradient" },
+        { name: "ethers.js", color: "yellow-text-gradient" },
+        { name: "Metamask", color: "orange-text-gradient" },
+        { name: "IPFS", color: "pink-text-gradient" }
+      ],
+      image: digifund,
+      live_link: "https://digifund.vercel.app/",
+      source_code_link: "https://github.com/mishikaa/digiFund"
+    }
+  ],
+  arDevelopment: [
+    {
+      name: "AR Beats",
+      description: "An immersive AR music player with marker-based interactions.",
+      tags: [
+        { name: "A-Frame", color: "pink-text-gradient" },
+        { name: "AR.js", color: "green-text-gradient" },
+        { name: "Howler.js", color: "blue-text-gradient" },
+        { name: "HTML5", color: "yellow-text-gradient" },
+        { name: "CSS3", color: "orange-text-gradient" },
+        { name: "JavaScript", color: "pink-text-gradient" }
+      ],
+      image: arBeats,
+      live_link: "https://mishikaa.github.io/ARBeats/",
+      source_code_link: "https://github.com/mishikaa/arBeats"
+    }
+  ]
+};
 
 export { services, technologies, experiences, projects };
