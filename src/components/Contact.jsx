@@ -176,7 +176,7 @@ const Contact = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center
-                  hover:bg-gray-700 transition-all duration-300 hover:scale-110'
+                  hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto'
                 >
                   <img className='w-8 h-8' src={githubLogo} alt="GitHub" />
                 </a>
@@ -185,7 +185,7 @@ const Contact = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center
-                  hover:bg-gray-700 transition-all duration-300 hover:scale-110'
+                  hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto'
                 >
                   <img className='w-8 h-8' src={linkedin} alt="LinkedIn" />
                 </a>
@@ -194,7 +194,7 @@ const Contact = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center
-                  hover:bg-gray-700 transition-all duration-300 hover:scale-110'
+                  hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto'
                 >
                   <img className='w-8 h-8' src={instagram} alt="Instagram" />
                 </a>

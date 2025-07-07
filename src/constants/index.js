@@ -57,6 +57,7 @@ import {
   exposys,
   upwork,
   cisco,
+  cisco_certificate,
   exposys_certificate,
   devspark_certificate,
   arCard
@@ -290,8 +291,8 @@ const experiences = [
         "Developed a log retrieval agent to query ELK (Kibana) and Kubernetes metrics, aggregating system health into actionable insights.",
         "Optimized complex PostgreSQL queries for real-time analytics and anomaly detection, enhancing performance monitoring.",
         "Enhanced a Django Runstats Dashboard with advanced filters, interactive Chart.js visuals, and improved UI/UX for better user engagement."
-    ]
-
+    ],
+    certificate: cisco_certificate
   },
   {
     title: "Web Development Intern",

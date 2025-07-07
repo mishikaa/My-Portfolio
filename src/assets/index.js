@@ -74,6 +74,7 @@ import instagram from "./contactLogos/instagram.png";
 import linkedin from "./contactLogos/linkedin.png";
 import exposys from "./exposys.png";
 import upwork from "./upwork.png";
+import cisco_certificate from "./cisco_certificate.pdf";
 import exposys_certificate from "./exposys_certificate.pdf";
 import devspark_certificate from "./devspark_certificate.pdf";
 
@@ -149,6 +150,7 @@ export {
   cisco,
   exposys,
   devspark,
+  cisco_certificate,
   exposys_certificate,
   devspark_certificate,
   upwork
