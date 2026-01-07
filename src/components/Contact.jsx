@@ -64,37 +64,48 @@ const Contact = () => {
   }
   
   return (
-    <div className="py-16">
-      <div className='xl:mt-12 flex flex-col lg:flex-row gap-10 justify-center items-start'>
+    <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <div className='xl:mt-12 flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-start'>
         <motion.div
           variants={slideIn("left", "tween", 0.25, 1)}
-          className='flex-1 max-w-2xl bg-gradient-to-br from-gray-900/90 to-gray-800/90 
-          backdrop-blur-md p-8 rounded-2xl border border-gray-700/50 shadow-2xl'
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className='flex-1 w-full max-w-2xl bg-gradient-to-br from-gray-900/90 to-gray-800/90 
+          backdrop-blur-md p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700/50 shadow-2xl'
         >
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact Me</h3>
+          <p className='text-gray-400 text-sm sm:text-base uppercase tracking-wider text-center sm:text-left'>
+            Get in touch
+          </p>
+          <h3 className='text-white font-black text-2xl sm:text-3xl lg:text-4xl text-center sm:text-left mt-2'>
+            Let's Work Together
+          </h3>
+          <p className='text-gray-300 text-sm sm:text-base mt-3 text-center sm:text-left'>
+            Available for full-time opportunities, freelance projects, and collaborations. 
+            Let's build something amazing together! 🚀
+          </p>
           
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className='mt-12 flex flex-col gap-6'
+            className='mt-8 sm:mt-12 flex flex-col gap-4 sm:gap-6'
           >
             <div className='flex flex-col'>
-              <label className='text-white font-medium mb-2'>Name</label>
+              <label className='text-white font-medium text-sm sm:text-base mb-2'>Name</label>
               <input
                 type="text"
                 name="name"
                 onChange={handleChange}
                 value={form.name}
                 placeholder="Enter your name"
-                className='bg-gray-800/50 py-4 px-6 placeholder:text-gray-400
-                text-white rounded-lg border border-gray-600 focus:border-purple-500
+                className='bg-gray-800/50 py-3 sm:py-4 px-4 sm:px-6 placeholder:text-gray-400
+                text-white text-sm sm:text-base rounded-lg border border-gray-600 focus:border-purple-500
                 focus:outline-none font-medium transition-all duration-300'
               />
             </div>
 
             <div className='flex flex-col'>
-              <label className='text-white font-medium mb-2'>
+              <label className='text-white font-medium text-sm sm:text-base mb-2'>
                 Email <span className='text-red-400'>*</span>
               </label>
               <input
@@ -104,25 +115,25 @@ const Contact = () => {
                 value={form.email}
                 placeholder="Enter your email"
                 required
-                className='bg-gray-800/50 py-4 px-6 placeholder:text-gray-400
-                text-white rounded-lg border border-gray-600 focus:border-purple-500
+                className='bg-gray-800/50 py-3 sm:py-4 px-4 sm:px-6 placeholder:text-gray-400
+                text-white text-sm sm:text-base rounded-lg border border-gray-600 focus:border-purple-500
                 focus:outline-none font-medium transition-all duration-300'
               />
             </div>
 
             <div className='flex flex-col'>
-              <label className='text-white font-medium mb-2'>
+              <label className='text-white font-medium text-sm sm:text-base mb-2'>
                 Message / Feedback <span className='text-red-400'>*</span>
               </label>
               <textarea
-                rows="6"
+                rows="5"
                 name="message"
                 onChange={handleChange}
                 value={form.message}
                 placeholder="Enter your message"
                 required
-                className='bg-gray-800/50 py-4 px-6 placeholder:text-gray-400
-                text-white rounded-lg border border-gray-600 focus:border-purple-500
+                className='bg-gray-800/50 py-3 sm:py-4 px-4 sm:px-6 placeholder:text-gray-400
+                text-white text-sm sm:text-base rounded-lg border border-gray-600 focus:border-purple-500
                 focus:outline-none font-medium resize-none transition-all duration-300'
               />
             </div>
@@ -130,7 +141,8 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className='py-4 px-8 text-white bg-gradient-to-r from-purple-600 to-pink-600
+              className='py-3 sm:py-4 px-6 sm:px-8 text-white text-sm sm:text-base
+              bg-gradient-to-r from-purple-600 to-pink-600
               hover:from-purple-700 hover:to-pink-700 disabled:from-gray-600 disabled:to-gray-700
               rounded-lg font-bold shadow-lg hover:shadow-purple-500/25 
               transition-all duration-300 hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed'
@@ -151,52 +163,59 @@ const Contact = () => {
         {/* Contact Info */}
         <motion.div
           variants={slideIn("right", "tween", 0.25, 1)}
-          className='flex-1 max-w-md'
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className='flex-1 w-full max-w-md mt-8 lg:mt-0'
         >
           <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 
-          backdrop-blur-md p-8 rounded-2xl border border-gray-700/50'>
-            <h4 className='text-white text-2xl font-bold mb-6'>Let's Connect!</h4>
-            <div className='space-y-4 text-gray-300'>
-              <p className='leading-relaxed'>
+          backdrop-blur-md p-6 sm:p-8 rounded-xl sm:rounded-2xl border border-gray-700/50'>
+            <h4 className='text-white text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center sm:text-left'>
+              Let's Connect!
+            </h4>
+            <div className='space-y-3 sm:space-y-4 text-gray-300 text-sm sm:text-base'>
+              <p className='leading-relaxed text-center sm:text-left'>
                 I'm always open to discussing new opportunities, collaborating on exciting projects, 
                 or just having a chat about technology and innovation.
               </p>
-              <p className='leading-relaxed'>
+              <p className='leading-relaxed text-center sm:text-left'>
                 Feel free to reach out if you have any questions, want to collaborate, 
                 or just want to say hello!
               </p>
             </div>
             
             {/* Social Links */}
-            <div className='mt-8'>
-              <h5 className='text-white font-semibold mb-4'>Find me on</h5>
-              <div className='flex gap-4'>
+            <div className='mt-6 sm:mt-8'>
+              <h5 className='text-white font-semibold text-sm sm:text-base mb-3 sm:mb-4 text-center sm:text-left'>
+                Find me on
+              </h5>
+              <div className='flex gap-3 sm:gap-4 justify-center sm:justify-start'>
                 <a 
                   href="https://github.com/mishikaa" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center
+                  className='w-11 h-11 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center
                   hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto'
                 >
-                  <img className='w-8 h-8' src={githubLogo} alt="GitHub" />
+                  <img className='w-7 h-7 sm:w-8 sm:h-8' src={githubLogo} alt="GitHub" />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/mishika16" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center
+                  className='w-11 h-11 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center
                   hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto'
                 >
-                  <img className='w-8 h-8' src={linkedin} alt="LinkedIn" />
+                  <img className='w-7 h-7 sm:w-8 sm:h-8' src={linkedin} alt="LinkedIn" />
                 </a>
                 <a 
                   href="https://www.instagram.com/_._mishika_" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className='w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center
+                  className='w-11 h-11 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center
                   hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto'
                 >
-                  <img className='w-8 h-8' src={instagram} alt="Instagram" />
+                  <img className='w-7 h-7 sm:w-8 sm:h-8' src={instagram} alt="Instagram" />
                 </a>
               </div>
             </div>

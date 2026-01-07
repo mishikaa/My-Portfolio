@@ -20,13 +20,13 @@ const Navbar = () => {
             window.scroll(0, 0)
           }}
         >
-          <img src={logo} alt="logo" className='w-15 h-12 object-contain'/>
-          <p className='text-white text-[18px] font-bold cursor-pointer flex hover:text-purple-400 transition-colors'>
+          <img src={logo} alt="logo" className='w-15 h-12 object-contain group-hover:scale-110 transition-transform'/>
+          <p className='text-white text-[18px] font-bold cursor-pointer flex group-hover:text-purple-400 transition-colors'>
             Mishika &nbsp;<span className='hidden sm:block'>Jaiswal</span>
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-8'>
+        <ul className='list-none hidden lg:flex flex-row gap-6 items-center'>
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -42,10 +42,25 @@ const Navbar = () => {
               transition-all duration-300 group-hover:w-full ${active === link.title ? 'w-full' : ''}`}></div>
             </li>
           ))}
+          <li>
+            <a 
+              href="https://drive.google.com/file/d/1zrax7f49sZe8-VR2GlY5M5wBJz6bOAEh/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className='px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white 
+              text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50
+              transition-all duration-300 hover:scale-105 inline-flex items-center gap-2'
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Resume
+            </a>
+          </li>
         </ul>
 
         {/* Mobile menu */}
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className='lg:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu} alt="menu"
             className='w-[28px] h-[28px] object-contain cursor-pointer hover:scale-110 transition-transform'
@@ -75,6 +90,22 @@ const Navbar = () => {
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
+            <li className='w-full mt-2'>
+              <a 
+                href="https://drive.google.com/file/d/1zrax7f49sZe8-VR2GlY5M5wBJz6bOAEh/view?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className='w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white 
+                text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50
+                transition-all duration-300 inline-flex items-center justify-center gap-2'
+                onClick={() => setToggle(false)}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Resume
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import {Navbar, Hero, Tech, Works, About, Contact, StarsCanvas, Experience} from "./components"
+import {Navbar, Hero, Tech, Works, About, Contact, StarsCanvas, Experience, Footer, ScrollToTop} from "./components"
 import { contactRight } from "./assets"
 
 function App() {
@@ -32,6 +32,12 @@ function App() {
           alt="bg-image" 
         />
       </div>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
     </BrowserRouter>
   )

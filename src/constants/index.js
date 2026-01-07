@@ -90,71 +90,35 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer @ Cisco",
     icon: web,
     url: "https://github.com/mishikaa?tab=repositories"
   },
   {
-    title: "Fullstack Web Developer",
+    title: "AI/LLM & RAG Systems Developer",
     icon: backend,
     url: "https://github.com/mishikaa?tab=repositories"
   },
   {
-    title: "AR Developer & Enthusiast",
+    title: "Enterprise Automation Engineer",
     icon: arCard,
-    url: "https://github.com/mishikaa/ARBeats"
+    url: "https://github.com/mishikaa?tab=repositories"
   },
   {
-    title: "UI / UX Designer",
+    title: "Full Stack Web Developer",
     icon: mobile,
-    url: "https://www.figma.com/@mishika"
+    url: "https://github.com/mishikaa?tab=repositories"
   }
 ];
 
 const technologies = [
   {
-    name: "C",
-    icon: c,
-  },
-  {
-    name: "C++",
-    icon: cpp,
-  },
-  {
     name: "Python",
     icon: python,
   },
   {
-    name: "Django",
-    icon: django,
-  },
-  {
-    name: "Langchain",
-    icon: langchain,
-  },
-  {
-    name: "Ollama",
-    icon: ollama,
-  },
-  {
-    name: "ChromaDB",
-    icon: chromaDB,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Sass",
-    icon: sass,
+    name: "C/C++",
+    icon: cpp,
   },
   {
     name: "JavaScript",
@@ -165,15 +129,59 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "Node JS",
+    name: "LangChain",
+    icon: langchain,
+  },
+  {
+    name: "ChromaDB",
+    icon: chromaDB,
+  },
+  {
+    name: "Ollama",
+    icon: ollama,
+  },
+  {
+    name: "Django",
+    icon: django,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Next.js",
+    icon: nextjs,
+  },
+  {
+    name: "Node.js",
     icon: nodejs,
   },
   {
-    name: "Expressjs",
+    name: "Express.js",
     icon: expressjs,
   },
   {
-    name: "socket io",
+    name: "Redux",
+    icon: redux,
+  },
+  {
+    name: "HTML5",
+    icon: html,
+  },
+  {
+    name: "CSS3",
+    icon: css,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "SASS",
+    icon: sass,
+  },
+  {
+    name: "Socket.io",
     icon: socketio,
   },
   {
@@ -185,7 +193,7 @@ const technologies = [
     icon: postgresql,
   },
   {
-    name: "MySql",
+    name: "MySQL",
     icon: mysql,
   },
   {
@@ -193,41 +201,20 @@ const technologies = [
     icon: redis,
   },
   {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Next.js",
-    icon: nextjs,
-  },
-  {
-    name: "Vue.js",
-    icon: vuejs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Three.js",
+    icon: threejs,
   },
   {
     name: "AR.js",
     icon: ar,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "Material UI",
     icon: materialui,
   },
-
   {
     name: "Framer Motion",
     icon: framermotion,
-  },
-  {
-    name: "Postman",
-    icon: postman,
   },
   {
     name: "Solidity",
@@ -242,68 +229,84 @@ const technologies = [
     icon: hardhat,
   },
   {
-    name: "Netlify",
-    icon: netlify,
+    name: "Git",
+    icon: git,
   },
   {
-    name: "Vercel",
-    icon: vercel,
+    name: "GitLab",
+    icon: gitlab,
+  },
+  {
+    name: "GitHub",
+    icon: github,
+  },
+  {
+    name: "Postman",
+    icon: postman,
   },
   {
     name: "Firebase",
     icon: firebase,
   },
   {
+    name: "Vercel",
+    icon: vercel,
+  },
+  {
+    name: "Netlify",
+    icon: netlify,
+  },
+  {
+    name: "Figma",
+    icon: figma,
+  },
+  {
     name: "Bootstrap",
     icon: bootstrap,
   },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "gitlab",
-    icon: gitlab,
-  },
-  {
-    name: "github",
-    icon: github,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  // {
-  //   name: "Canva",
-  //   icon: canva,
-  // },
+  // Add icons for these technologies for complete resume representation:
+  // Kubernetes, Docker, Selenium, AWS S3, HuggingFace, QLoRA, Celery, Ethers.js, Chart.js
 ];
 
 const experiences = [
   {
-    title: "Software Engineering Intern",
+    title: "Software Engineer",
+    company_name: "Cisco Systems",
+    icon: cisco,
+    iconBg: "#383E56",
+    date: "August 2025 - Present",
+    points: [
+        "Engineered an enterprise UI automation framework for Cisco Intersight using Selenium abstractions for Shadow DOM, automating 1500+ test cases and significantly reducing manual testing effort.",
+        "Architected a dynamic OpenShift Console plugin integrating Cisco Intersight with Red Hat OpenShift, enabling real-time hardware inventory, monitoring, and seamless hybrid cloud management.",
+        "Developed robust test execution engine integrating with CI/CD pipelines for continuous quality assurance and rapid deployment cycles.",
+        "Enhanced automation framework with advanced error handling and reporting mechanisms, improving debugging efficiency and test reliability."
+    ]
+  },
+  {
+    title: "Software Engineer Intern",
     company_name: "Cisco Systems",
     icon: cisco,
     iconBg: "#383E56",
     date: "January 2025 - July 2025",
     points: [
-        "Built a multi-agent LLM diagnostic system using RAG for automated triage, root cause analysis, and error classification, streamlining QA and debugging.",
-        "Developed a log retrieval agent to query ELK (Kibana) and Kubernetes metrics, aggregating system health into actionable insights.",
-        "Optimized complex PostgreSQL queries for real-time analytics and anomaly detection, enhancing performance monitoring.",
-        "Enhanced a Django Runstats Dashboard with advanced filters, interactive Chart.js visuals, and improved UI/UX for better user engagement."
+        "Designed a multi-agent system for automated error triage and root-cause analysis using RAG + ChromaDB + Kibana logs, accelerating debugging and improving system reliability.",
+        "Delivered a full-stack Django Runstats Dashboard with real-time analytics, custom PostgreSQL queries, dynamic filters, and Chart.js visualizations for enhanced performance monitoring.",
+        "Implemented LangChain-based agents for intelligent log analysis and pattern recognition, reducing mean time to resolution (MTTR) for critical issues.",
+        "Optimized database queries and indexing strategies, improving dashboard response time by 40% and enabling real-time anomaly detection."
     ],
     certificate: cisco_certificate
   },
   {
-    title: "Web Development Intern",
+    title: "Web Developer Intern",
     company_name: "Devspark",
     icon: devspark,
     iconBg: "#383E56",
-    date: "May 13 - July 14, 2024",
+    date: "May 2024 - July 2024",
     points: [
-      "Built a full-stack MERN application for project management, enhancing team collaboration.",
-      "Implemented Google OAuth 2.0 authentication with role-based access control for secure user access.",
-      "Developed and optimized a React.js, Node.js, and MongoDB-based system with AWS S3, CDN, and pre-signed URLs for efficient file storage and retrieval."
+      "Built a full-stack MERN project-management system, improving team collaboration by 30% through streamlined workflows and real-time updates.",
+      "Implemented Google OAuth 2.0 authentication with Role-Based Access Control (RBAC) for secure, scalable user access management.",
+      "Developed React-Node-MongoDB system utilizing AWS S3, CloudFront CDN, and presigned URLs for efficient, secure file storage and retrieval.",
+      "Optimized application performance with lazy loading, code splitting, and caching strategies, reducing page load time by 25%."
     ],
     certificate: devspark_certificate
   },
@@ -338,7 +341,7 @@ const projects = {
   webDevelopment: [
     {
       name: "Code Master",
-      description: "A powerful DSA problem search engine with BM25 and TF-IDF ranking algorithms.",
+      description: "DSA problem search engine scraping 3,000+ problems using Selenium. Enhanced search precision by 35% with BM25 and TF-IDF algorithms. Optimized RAM-based indexing, reducing latency by 20%.",
       tags: [
         { name: "EJS", color: "pink-text-gradient" },
         { name: "JavaScript", color: "blue-text-gradient" },
@@ -353,14 +356,14 @@ const projects = {
     },
     {
       name: "Femme Cab",
-      description: "A women-only cab booking system for safer travel.",
+      description: "Women-centric ride-booking platform with real-time threat detection powered by OpenCV and TensorFlow. Integrated Mapbox for navigation, improving route accuracy by 15%. Enhanced safety features with secure authentication and emergency alerts.",
       tags: [
         { name: "React", color: "pink-text-gradient" },
         { name: "Node.js", color: "orange-text-gradient" },
-        { name: "Express", color: "green-text-gradient" },
-        { name: "MongoDB", color: "orange-text-gradient" },
-        { name: "Flask", color: "green-text-gradient" },
-        { name: "OpenCV", color: "blue-text-gradient" }
+        { name: "MongoDB", color: "yellow-text-gradient" },
+        { name: "TensorFlow", color: "blue-text-gradient" },
+        { name: "OpenCV", color: "green-text-gradient" },
+        { name: "Mapbox", color: "pink-text-gradient" }
       ],
       image: femmecab,
       live_link: "https://femme-cab.vercel.app/",
@@ -495,7 +498,7 @@ const projects = {
   blockchain: [
     {
       name: "Digi Fund",
-      description: "A decentralized crowdfunding platform leveraging blockchain.",
+      description: "Decentralized crowdfunding platform built with Next.js and TypeScript. Implemented Metamask for Web3 authentication and leveraged IPFS for decentralized storage, ensuring secure, transparent blockchain transactions.",
       tags: [
         { name: "Next.js", color: "pink-text-gradient" },
         { name: "TypeScript", color: "green-text-gradient" },
@@ -512,7 +515,7 @@ const projects = {
   arDevelopment: [
     {
       name: "AR Beats",
-      description: "An immersive AR music player with marker-based interactions.",
+      description: "Augmented Reality music player featuring marker detection and intuitive playback controls. Incorporated Howler.js for advanced audio management, improving sound clarity by 25% and delivering immersive AR experiences.",
       tags: [
         { name: "A-Frame", color: "pink-text-gradient" },
         { name: "AR.js", color: "green-text-gradient" },

@@ -15,20 +15,64 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a2e;
+  background: #0a0a0f;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #915eff;
-  border-radius: 4px;
+  background: linear-gradient(180deg, #915eff 0%, #d946ef 100%);
+  border-radius: 10px;
+  border: 2px solid #0a0a0f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c45e8;
+  background: linear-gradient(180deg, #7c45e8 0%, #c026d3 100%);
+}
+
+/* Custom Animations */
+@keyframes animate-tilt {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.animate-tilt {
+  animation: animate-tilt 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient animation for backgrounds */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
 }
 
 /* Line clamp utility */
