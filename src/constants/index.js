@@ -276,10 +276,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "August 2025 - Present",
     points: [
-        "Engineered an enterprise UI automation framework for Cisco Intersight using Selenium abstractions for Shadow DOM, automating 1500+ test cases and significantly reducing manual testing effort.",
-        "Architected a dynamic OpenShift Console plugin integrating Cisco Intersight with Red Hat OpenShift, enabling real-time hardware inventory, monitoring, and seamless hybrid cloud management.",
-        "Developed robust test execution engine integrating with CI/CD pipelines for continuous quality assurance and rapid deployment cycles.",
-        "Enhanced automation framework with advanced error handling and reporting mechanisms, improving debugging efficiency and test reliability."
+        "Engineered enterprise UI automation framework for Cisco Intersight using Selenium, automating 1500+ test cases.",
+        "Architected OpenShift Console plugin integrating Cisco Intersight with Red Hat OpenShift for hybrid cloud management.",
+        "Developed test execution engine with CI/CD pipeline integration for continuous quality assurance."
     ]
   },
   {
@@ -289,10 +288,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "January 2025 - July 2025",
     points: [
-        "Designed a multi-agent system for automated error triage and root-cause analysis using RAG + ChromaDB + Kibana logs, accelerating debugging and improving system reliability.",
-        "Delivered a full-stack Django Runstats Dashboard with real-time analytics, custom PostgreSQL queries, dynamic filters, and Chart.js visualizations for enhanced performance monitoring.",
-        "Implemented LangChain-based agents for intelligent log analysis and pattern recognition, reducing mean time to resolution (MTTR) for critical issues.",
-        "Optimized database queries and indexing strategies, improving dashboard response time by 40% and enabling real-time anomaly detection."
+        "Designed multi-agent system for automated error triage using RAG + ChromaDB + Kibana logs.",
+        "Built full-stack Django Runstats Dashboard with real-time analytics, PostgreSQL queries, and Chart.js visualizations.",
+        "Implemented LangChain-based agents for intelligent log analysis, reducing MTTR by 40%."
     ],
     certificate: cisco_certificate
   },
@@ -303,10 +301,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "May 2024 - July 2024",
     points: [
-      "Built a full-stack MERN project-management system, improving team collaboration by 30% through streamlined workflows and real-time updates.",
-      "Implemented Google OAuth 2.0 authentication with Role-Based Access Control (RBAC) for secure, scalable user access management.",
-      "Developed React-Node-MongoDB system utilizing AWS S3, CloudFront CDN, and presigned URLs for efficient, secure file storage and retrieval.",
-      "Optimized application performance with lazy loading, code splitting, and caching strategies, reducing page load time by 25%."
+      "Built full-stack MERN project-management system, improving team collaboration by 30%.",
+      "Implemented Google OAuth 2.0 with RBAC for secure user access management.",
+      "Developed AWS S3 + CloudFront CDN integration with presigned URLs for secure file storage."
     ],
     certificate: devspark_certificate
   },
@@ -317,9 +314,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "November 3 - December 2, 2023",
     points: [
-      "Developed a web application for a startup business.",
-      "Worked on both frontend and backend development tasks.",
-      "Worked with Next.js, tailwindcss, MongoDB, and node.js tech stacks."
+      "Developed full-stack web application using Next.js, MongoDB, and Node.js.",
+      "Implemented responsive UI with Tailwind CSS and optimized performance."
     ],
     certificate: exposys_certificate
   },
@@ -330,8 +326,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "December 10 - December 17, 2023",
     points: [
-      "Created a portfolio website for the KKNNS organization. (LINK)",
-      "Worked with Next.js, Tailwind CSS, and Node.js tech stacks."
+      "Created a portfolio website for the KKNNS organization.",
+      "Built with Next.js, Tailwind CSS, and Node.js for optimal performance."
     ],
     link: "https://www.sscnmodel.in/"
   }

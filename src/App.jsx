@@ -13,13 +13,11 @@ function App() {
       </div>
       
       {/* Main Content Sections */}
-      <div className="relative z-10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <About /> 
-          <Experience /> 
-          <Works /> 
-          <Tech /> 
-        </div>
+      <div className="relative z-10 w-full">
+        <About /> 
+        <Experience /> 
+        <Works /> 
+        <Tech />
       </div>
       
       {/* Contact Section with background */}

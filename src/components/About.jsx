@@ -10,50 +10,50 @@ import { SectionWrapper } from '../higherOrderComponent'
 
 const Card = ({title, index, icon, url}) => {
   return (
-    <Tilt className="w-full max-w-[280px] sm:max-w-[250px] group" options={{ max: 25, scale: 1.05 }}>
+    <Tilt className="w-full group" options={{ max: 25, scale: 1.05 }}>
       <motion.div
         variants={fadeIn("up","spring", 0.3 * index, 0.75)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className='w-full rounded-2xl shadow-card overflow-hidden
+        className='w-full h-full rounded-xl sm:rounded-2xl shadow-card overflow-hidden
         hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-500'
       >
         <a
           href={url}
           target='_blank'
           rel="noopener noreferrer"
-          className='relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl 
-          cursor-pointer py-6 sm:py-8 px-6 sm:px-8 min-h-[240px] sm:min-h-[280px]
-          flex justify-evenly items-center flex-col 
+          className='relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl sm:rounded-2xl 
+          cursor-pointer py-6 sm:py-7 md:py-8 px-4 sm:px-5 md:px-6 h-[260px] sm:h-[280px]
+          flex justify-center items-center flex-col 
           border-2 border-gray-700/50 hover:border-purple-500/70 
-          transition-all duration-500 overflow-hidden'
+          transition-all duration-500 overflow-hidden w-full'
         >
           {/* Animated background gradient */}
           <div className='absolute inset-0 bg-gradient-to-br from-purple-600/0 via-pink-600/0 to-purple-600/0 
           opacity-0 group-hover:opacity-10 transition-opacity duration-500'></div>
           
           {/* Icon with animation */}
-          <div className='relative z-10 p-3 sm:p-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 
-          group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-500'>
+          <div className='relative z-10 p-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 
+          group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-500 mb-4'>
             <img 
               src={icon} 
               alt={title} 
-              className='w-14 h-14 sm:w-16 sm:h-16 object-contain group-hover:scale-110 group-hover:rotate-3 
+              className='w-16 h-16 sm:w-18 sm:h-18 object-contain group-hover:scale-110 group-hover:rotate-3 
               transition-all duration-500 filter group-hover:drop-shadow-lg'
             />
           </div>
           
-          <h3 className='relative z-10 text-white text-base sm:text-[18px] font-bold text-center leading-snug mt-3 sm:mt-4
+          <h3 className='relative z-10 text-white text-base sm:text-lg font-bold text-center leading-snug
           group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 
-          group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500 px-2'>
+          group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-500 px-3 break-words max-w-full'>
             {title}
           </h3>
           
           {/* Hover arrow indicator */}
           <svg 
             className='relative z-10 w-6 h-6 text-purple-400 opacity-0 group-hover:opacity-100 
-            transform translate-y-2 group-hover:translate-y-0 transition-all duration-500' 
+            transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 mt-3' 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -68,69 +68,100 @@ const Card = ({title, index, icon, url}) => {
 
 const About = () => {
   return (
-    <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <div className="py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
     <motion.div 
       variants={textVariant()}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
+      className="text-center"
     >
-      <p className='text-gray-400 text-sm sm:text-base uppercase tracking-wider text-center lg:text-left'>
+      <p className='text-gray-400 text-xs sm:text-sm md:text-base uppercase tracking-wider'>
         Introduction
       </p>
-      <h2 className='text-white font-black text-3xl sm:text-4xl lg:text-5xl text-center lg:text-left mt-2'>
+      <h2 className='text-white font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 break-words'>
         Overview
       </h2>
     </motion.div>
-    <motion.p 
-      className='mt-4 sm:mt-6 text-gray-300 text-sm sm:text-base lg:text-[17px] 
-      leading-[26px] sm:leading-[28px] lg:leading-[32px]' 
+    <motion.div 
+      className='mt-6 sm:mt-8 text-gray-300 text-sm sm:text-base md:text-[17px] 
+      leading-[24px] sm:leading-[28px] md:leading-[30px] lg:leading-[32px] break-words max-w-4xl mx-auto' 
       variants={fadeIn("", "", 0.1, 1)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
+      {/* Title Badge */}
+      <div className='flex items-center justify-center gap-2 mb-5 sm:mb-6 flex-wrap'>
+        <span className='px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 
+        text-purple-300 text-xs sm:text-sm font-bold rounded-lg border border-purple-500/40 
+        backdrop-blur-sm shadow-lg shadow-purple-500/10 whitespace-nowrap'>
+          💼 Software Engineer @ Cisco
+        </span>
+        <span className='px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 
+        text-blue-300 text-xs sm:text-sm font-bold rounded-lg border border-blue-500/40 
+        backdrop-blur-sm shadow-lg shadow-blue-500/10 whitespace-nowrap'>
+          🎓 ABV-IIITM Gwalior • 8.34 CGPA
+        </span>
+      </div>
 
-      I'm a <strong>Computer Science graduate from ABV-IIITM Gwalior (CGPA: 8.34/10)</strong> and a <strong>Software Engineer at Cisco Systems</strong>, passionate about building intelligent, scalable enterprise software systems that solve real-world problems.
+      <p className='mb-5 sm:mb-6 text-gray-200 leading-relaxed text-center'>
+        I build <span className='text-purple-400 font-semibold'>scalable, intelligent enterprise systems</span> with 
+        experience across automation, full&#8209;stack development, and AI&#8209;driven solutions. At <strong>Cisco</strong>, 
+        I've engineered Selenium&#8209;based UI automation frameworks <span className='text-green-400 font-semibold'>(1500+ test cases)</span> and 
+        developed <strong>OpenShift Console plugins</strong> for hybrid cloud management.
+      </p>
 
-      <br/><br/>
-      <strong>🚀 Enterprise Automation:</strong> Engineered UI automation frameworks using Selenium for Shadow DOM manipulation, automating 1500+ test cases. Architected dynamic OpenShift Console plugins for hybrid cloud management.
-      <br/>
-      <strong>🧠 AI & LLM Engineering:</strong> Designed multi-agent systems with RAG pipelines, ChromaDB, and LangChain for automated error triage and root-cause analysis—accelerating debugging and boosting engineering efficiency.
-      <br/>
-      <strong>💻 Full-Stack Development:</strong> Built production-grade web applications with React, Next.js, Django, Node.js, and modern databases (PostgreSQL, MongoDB, Redis), delivering real-time analytics and seamless user experiences.
-      <br/>
-      <strong>🔮 Augmented Reality:</strong> Created immersive AR experiences that blend digital interactions with real-world environments using A-Frame and AR.js.
-      <br/>
-      <strong>⛓ Blockchain & Web3:</strong> Developed secure decentralized applications with Solidity, Ethers.js, and IPFS focused on trust, transparency, and data integrity.
+      {/* Tech Focus Areas */}
+      <div className='grid md:grid-cols-2 gap-4 sm:gap-5 mb-5 sm:mb-6'>
+        <div className='p-4 sm:p-5 bg-gradient-to-br from-purple-900/10 to-pink-900/10 
+        rounded-xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/40 
+        transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10'>
+          <h4 className='text-purple-300 font-bold text-sm sm:text-base mb-2 flex items-center gap-2 justify-center md:justify-start'>
+            <span className='text-lg'>🤖</span> AI & LLM Engineering
+          </h4>
+          <p className='text-gray-300 text-xs sm:text-sm leading-relaxed text-center md:text-left'>
+            I work extensively with <strong>LLMs, RAG pipelines, LangChain,</strong> and <strong>vector databases</strong> to 
+            design multi&#8209;agent systems for automated debugging and root&#8209;cause analysis.
+          </p>
+        </div>
 
-      <br/><br/>
-      <strong>Problem Solver:</strong> Solved <strong>800+ DSA problems</strong> on  
-      <a href="https://www.leetcode.com/mishikaj2001" className='text-slate-200' target="_blank"> Leetcode</a> and  
-      <a href="https://www.geeksforgeeks.org/user/mishika16/" className='text-slate-200' target="_blank"> GeeksForGeeks</a>, strengthening competitive programming skills and algorithmic thinking.
+        <div className='p-4 sm:p-5 bg-gradient-to-br from-blue-900/10 to-cyan-900/10 
+        rounded-xl border border-blue-500/20 backdrop-blur-sm hover:border-blue-500/40 
+        transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10'>
+          <h4 className='text-blue-300 font-bold text-sm sm:text-base mb-2 flex items-center gap-2 justify-center md:justify-start'>
+            <span className='text-lg'>⚡</span> Full-Stack Development
+          </h4>
+          <p className='text-gray-300 text-xs sm:text-sm leading-relaxed text-center md:text-left'>
+            My stack includes <strong>React, Next.js, Node.js, Django, PostgreSQL, MongoDB, and Redis</strong>, 
+            with additional hands&#8209;on experience in <span className='text-cyan-400 font-semibold'>AR</span> (A&#8209;Frame, AR.js) 
+            and <span className='text-cyan-400 font-semibold'>Web3</span> (Solidity, Ethers.js, IPFS).
+          </p>
+        </div>
+      </div>
 
-      <br/><br/>
-      <strong>Open Source Contributor (GSSOC'24):</strong> Contributed to high-impact projects using JavaScript and React, specializing in feature development, bug fixes, and performance optimization.
+      <p className='text-gray-300 text-xs sm:text-sm leading-relaxed text-center'>
+        <strong className='text-purple-300'>Core Strengths:</strong> OOP, Operating Systems, DBMS, Computer Networks, 
+        and System Design — enabling me to architect efficient, scalable enterprise applications.
+      </p>
 
-      <br/><br/>
-      Well-versed in <strong>OOP, Operating Systems, DBMS, Computer Networks, LLM Engineering,</strong> and <strong>Retrieval-Augmented Generation (RAG)</strong>, enabling me to architect efficient, scalable enterprise applications.
-
-    </motion.p>
+    </motion.div>
 
     {/* Key Highlights */}
-    <div className='mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6'>
+    <div className='mt-8 sm:mt-10 lg:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 max-w-5xl mx-auto'>
       <motion.div 
         variants={fadeIn("up","spring", 0.2, 0.75)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className='bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm p-4 sm:p-6 
+        className='bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm p-4 sm:p-5 md:p-6 
         rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300
-        hover:shadow-lg hover:shadow-purple-500/20'
+        hover:shadow-xl hover:shadow-purple-500/20 text-center'
       >
-        <div className='text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 
-        text-transparent bg-clip-text'>800+</div>
-        <div className='text-xs sm:text-sm text-gray-400 mt-2 font-medium'>DSA Problems Solved</div>
+        <div className='text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 
+        text-transparent bg-clip-text break-words'>800+</div>
+        <div className='text-xs sm:text-sm md:text-base text-gray-400 mt-2 font-medium break-words'>DSA Problems Solved</div>
       </motion.div>
 
       <motion.div 
@@ -138,13 +169,13 @@ const About = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className='bg-gradient-to-br from-blue-900/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 
+        className='bg-gradient-to-br from-blue-900/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-5 md:p-6 
         rounded-xl border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300
-        hover:shadow-lg hover:shadow-blue-500/20'
+        hover:shadow-xl hover:shadow-blue-500/20 text-center'
       >
-        <div className='text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 
-        text-transparent bg-clip-text'>8.34</div>
-        <div className='text-xs sm:text-sm text-gray-400 mt-2 font-medium'>CGPA / 10</div>
+        <div className='text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 
+        text-transparent bg-clip-text break-words'>8.34</div>
+        <div className='text-xs sm:text-sm md:text-base text-gray-400 mt-2 font-medium break-words'>CGPA / 10</div>
       </motion.div>
 
       <motion.div 
@@ -152,13 +183,13 @@ const About = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className='bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-6 
+        className='bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-5 md:p-6 
         rounded-xl border border-green-500/30 hover:border-green-500/60 transition-all duration-300
-        hover:shadow-lg hover:shadow-green-500/20'
+        hover:shadow-xl hover:shadow-green-500/20 text-center'
       >
-        <div className='text-3xl sm:text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 
-        text-transparent bg-clip-text'>GSSOC</div>
-        <div className='text-xs sm:text-sm text-gray-400 mt-2 font-medium'>Open Source Contributor</div>
+        <div className='text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 
+        text-transparent bg-clip-text break-words'>GSSOC</div>
+        <div className='text-xs sm:text-sm md:text-base text-gray-400 mt-2 font-medium break-words'>Open Source Contributor</div>
       </motion.div>
 
       <motion.div 
@@ -166,23 +197,24 @@ const About = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className='bg-gradient-to-br from-orange-900/20 to-red-900/20 backdrop-blur-sm p-4 sm:p-6 
+        className='bg-gradient-to-br from-orange-900/20 to-red-900/20 backdrop-blur-sm p-4 sm:p-5 md:p-6 
         rounded-xl border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300
-        hover:shadow-lg hover:shadow-orange-500/20'
+        hover:shadow-xl hover:shadow-orange-500/20 text-center'
       >
-        <div className='text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 
-        text-transparent bg-clip-text'>95.2%</div>
-        <div className='text-xs sm:text-sm text-gray-400 mt-2 font-medium'>Class XII (ISC)</div>
+        <div className='text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-400 
+        text-transparent bg-clip-text break-words'>95.2%</div>
+        <div className='text-xs sm:text-sm md:text-base text-gray-400 mt-2 font-medium break-words'>Class XII (ISC)</div>
       </motion.div>
     </div>
 
 
     {/* Cards */}
     <div className='mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-    gap-6 sm:gap-8 lg:gap-6 place-items-center max-w-7xl mx-auto w-full'>
+    gap-6 sm:gap-6 lg:gap-6 max-w-6xl mx-auto'>
       {services.map((service, index) => (
         <Card key={service.title} index={index} {...service} />
       ))}
+    </div>
     </div>
     </div>
   )
