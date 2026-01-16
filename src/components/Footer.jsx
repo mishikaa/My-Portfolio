@@ -86,7 +86,7 @@ const Footer = () => {
               href="mailto:mishikaj2001@gmail.com" 
               className='text-gray-400 hover:text-purple-400 transition-colors text-sm'
             >
-              mishikaj2001@gmail.com
+              mishikaj1606@gmail.com
             </a>
           </div>
         </div>

@@ -119,25 +119,25 @@ const About = () => {
         rounded-xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/40 
         transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10'>
           <h4 className='text-purple-300 font-bold text-sm sm:text-base mb-2 flex items-center gap-2 justify-center md:justify-start'>
-            <span className='text-lg'>🤖</span> AI & LLM Engineering
-          </h4>
+          <span className='text-lg'>🤖</span> AI & LLM Engineering
+        </h4>
           <p className='text-gray-300 text-xs sm:text-sm leading-relaxed text-center md:text-left'>
-            I work extensively with <strong>LLMs, RAG pipelines, LangChain,</strong> and <strong>vector databases</strong> to 
-            design multi&#8209;agent systems for automated debugging and root&#8209;cause analysis.
-          </p>
-        </div>
+          I work extensively with <strong>LLMs, RAG pipelines, LangChain,</strong> and <strong>vector databases</strong> to 
+          design multi&#8209;agent systems for automated debugging and root&#8209;cause analysis.
+        </p>
+      </div>
 
         <div className='p-4 sm:p-5 bg-gradient-to-br from-blue-900/10 to-cyan-900/10 
         rounded-xl border border-blue-500/20 backdrop-blur-sm hover:border-blue-500/40 
         transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10'>
           <h4 className='text-blue-300 font-bold text-sm sm:text-base mb-2 flex items-center gap-2 justify-center md:justify-start'>
-            <span className='text-lg'>⚡</span> Full-Stack Development
-          </h4>
+          <span className='text-lg'>⚡</span> Full-Stack Development
+        </h4>
           <p className='text-gray-300 text-xs sm:text-sm leading-relaxed text-center md:text-left'>
-            My stack includes <strong>React, Next.js, Node.js, Django, PostgreSQL, MongoDB, and Redis</strong>, 
-            with additional hands&#8209;on experience in <span className='text-cyan-400 font-semibold'>AR</span> (A&#8209;Frame, AR.js) 
-            and <span className='text-cyan-400 font-semibold'>Web3</span> (Solidity, Ethers.js, IPFS).
-          </p>
+          My stack includes <strong>React, Next.js, Node.js, Django, PostgreSQL, MongoDB, and Redis</strong>, 
+          with additional hands&#8209;on experience in <span className='text-cyan-400 font-semibold'>AR</span> (A&#8209;Frame, AR.js) 
+          and <span className='text-cyan-400 font-semibold'>Web3</span> (Solidity, Ethers.js, IPFS).
+        </p>
         </div>
       </div>
 

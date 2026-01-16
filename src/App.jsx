@@ -21,11 +21,11 @@ function App() {
       </div>
       
       {/* Contact Section with background */}
-      <div className="relative mt-20">
+      <div className="relative w-full">
         <Contact /> 
         <StarsCanvas /> 
         <img 
-          className="z-0 absolute bottom-0 right-[-10rem] opacity-20 hidden lg:block" 
+          className="z-0 absolute bottom-0 right-[-8rem] sm:right-[-10rem] opacity-15 lg:opacity-20 hidden md:block pointer-events-none" 
           src={contactRight} 
           alt="bg-image" 
         />

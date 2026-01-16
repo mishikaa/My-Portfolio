@@ -1,8 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { SectionWrapper } from '../higherOrderComponent';
 import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { slideIn } from '../utils/motion';
 import emailjs from '@emailjs/browser';
 import { errorPopup, successPopup } from './Popup';
 import { githubLogo, instagram, linkedin } from '../assets';
@@ -40,11 +37,11 @@ const Contact = () => {
         return;
       }
       
-      await emailjs.send('service_1fecrps', 'template_4ui6aga', {
+      await emailjs.send('service_6rd4nw8', 'template_4ui6aga', {
         from_name: form.name,
         to_name: "Mishika",
         from_email: form.email,
-        to_email: "mishikaj2001@gmail.com",
+        to_email: "mishikaj1606@gmail.com",
         message: form.message
         }, 
         'NXB9Ii1cByTHJ4XA4'
@@ -64,24 +61,37 @@ const Contact = () => {
   }
   
   return (
-    <div className="py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <section className="w-full relative z-10 py-12 sm:py-16 lg:py-20" id="contact">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-      <div className='xl:mt-12 flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 justify-center items-start'>
-        <motion.div
-          variants={slideIn("left", "tween", 0.25, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+      {/* Section Header */}
+      <motion.div 
+        className="text-center mb-8 sm:mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <p className='text-gray-400 text-xs sm:text-sm md:text-base uppercase tracking-wider'>
+          Get in touch
+        </p>
+        <h2 className='text-white font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 break-words'>
+          Contact Me
+        </h2>
+      </motion.div>
+
+      <div className='flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 justify-center items-start'>
+        <motion.div 
           className='flex-1 w-full max-w-2xl bg-gradient-to-br from-gray-900/90 to-gray-800/90 
           backdrop-blur-md p-4 sm:p-6 md:p-8 rounded-lg sm:rounded-xl md:rounded-2xl border border-gray-700/50 shadow-2xl'
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
         >
-          <p className='text-gray-400 text-xs sm:text-sm md:text-base uppercase tracking-wider text-center sm:text-left'>
-            Get in touch
-          </p>
-          <h3 className='text-white font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center sm:text-left mt-2 break-words'>
+          <h3 className='text-white font-black text-lg sm:text-xl md:text-2xl text-center sm:text-left break-words'>
             Let's Work Together
           </h3>
-          <p className='text-gray-300 text-xs sm:text-sm md:text-base mt-2 sm:mt-3 text-center sm:text-left break-words'>
+          <p className='text-gray-300 text-xs sm:text-sm mt-2 sm:mt-3 text-center sm:text-left break-words'>
             Available for full&#8209;time opportunities, freelance projects, and collaborations. 
             Let's build something amazing together! 🚀
           </p>
@@ -89,7 +99,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className='mt-6 sm:mt-8 md:mt-12 flex flex-col gap-3 sm:gap-4 md:gap-6'
+            className='mt-4 sm:mt-6 md:mt-8 flex flex-col gap-3 sm:gap-4'
           >
             <div className='flex flex-col'>
               <label className='text-white font-medium text-xs sm:text-sm md:text-base mb-1.5 sm:mb-2'>Name</label>
@@ -149,7 +159,7 @@ const Contact = () => {
               transition-all duration-300 hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed w-full'
             >
               {loading ? (
-                <span className="flex items-center gap-2">
+                <span className="flex items-center gap-2 justify-center">
                   <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -162,19 +172,19 @@ const Contact = () => {
         </motion.div>
 
         {/* Contact Info */}
-        <motion.div
-          variants={slideIn("right", "tween", 0.25, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-          className='flex-1 w-full max-w-md mt-6 sm:mt-8 lg:mt-0'
+        <motion.div 
+          className='flex-1 w-full lg:max-w-md mt-6 sm:mt-8 lg:mt-0'
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           <div className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 
           backdrop-blur-md p-4 sm:p-6 md:p-8 rounded-lg sm:rounded-xl md:rounded-2xl border border-gray-700/50'>
-            <h4 className='text-white text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 text-center sm:text-left break-words'>
+            <h4 className='text-white text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4 text-center sm:text-left break-words'>
               Let's Connect!
             </h4>
-            <div className='space-y-2 sm:space-y-3 md:space-y-4 text-gray-300 text-xs sm:text-sm md:text-base'>
+            <div className='space-y-2 sm:space-y-3 text-gray-300 text-xs sm:text-sm'>
               <p className='leading-relaxed text-center sm:text-left break-words'>
                 I'm always open to discussing new opportunities, collaborating on exciting projects, 
                 or just having a chat about technology and innovation.
@@ -186,37 +196,37 @@ const Contact = () => {
             </div>
             
             {/* Social Links */}
-            <div className='mt-4 sm:mt-6 md:mt-8'>
-              <h5 className='text-white font-semibold text-xs sm:text-sm md:text-base mb-2 sm:mb-3 md:mb-4 text-center sm:text-left'>
+            <div className='mt-4 sm:mt-6'>
+              <h5 className='text-white font-semibold text-xs sm:text-sm mb-2 sm:mb-3 text-center sm:text-left'>
                 Find me on
               </h5>
-              <div className='flex gap-2 sm:gap-3 md:gap-4 justify-center sm:justify-start'>
+              <div className='flex gap-3 sm:gap-4 justify-center sm:justify-start'>
                 <a 
                   href="https://github.com/mishikaa" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className='w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center
+                  className='w-11 h-11 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center
                   hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto flex-shrink-0'
                 >
-                  <img className='w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8' src={githubLogo} alt="GitHub" />
+                  <img className='w-6 h-6 sm:w-7 sm:h-7' src={githubLogo} alt="GitHub" />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/mishika16" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className='w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center
+                  className='w-11 h-11 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center
                   hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto flex-shrink-0'
                 >
-                  <img className='w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8' src={linkedin} alt="LinkedIn" />
+                  <img className='w-6 h-6 sm:w-7 sm:h-7' src={linkedin} alt="LinkedIn" />
                 </a>
                 <a 
                   href="https://www.instagram.com/_._mishika_" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className='w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center
+                  className='w-11 h-11 sm:w-12 sm:h-12 bg-gray-800 rounded-full flex items-center justify-center
                   hover:bg-gray-700 transition-all duration-300 hover:scale-110 relative z-10 pointer-events-auto flex-shrink-0'
                 >
-                  <img className='w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8' src={instagram} alt="Instagram" />
+                  <img className='w-6 h-6 sm:w-7 sm:h-7' src={instagram} alt="Instagram" />
                 </a>
               </div>
             </div>
@@ -224,8 +234,8 @@ const Contact = () => {
         </motion.div>
       </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default SectionWrapper(Contact, "contact")
+export default Contact;
